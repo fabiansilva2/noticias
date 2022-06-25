@@ -31,8 +31,8 @@ class NoticiaRequest extends FormRequest
                 'required',
                 Rule::in(['A', 'I'])
             ],
-            'data_publicacao'=> ['required','date_format:d/m/Y'],
-            'imagem' => 'nullable|image'
+            'data_publicacao' => ['required','date_format:d/m/Y'],
+            'imagem' => 'nullable|imagem'
         ];
     }
 
@@ -43,7 +43,7 @@ class NoticiaRequest extends FormRequest
             'titulo.required' => 'O campo titulo é obrigatorio',
             'conteudo.required'=> 'O campo conteudo é obrigatorio',
             'status.required'=> 'O campo status é obrigatorio',
-            'imagem.imgem'=> 'Imagem é obrigatoria',
+            'imagem.imagem'=> 'Imagem é obrigatoria',
             'data_publicacao.required'=> 'Data de publicação é obrigatoria',
             'status.in'=> 'O campo status só pode ser Ativo ou Inativo',
         

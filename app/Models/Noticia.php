@@ -34,4 +34,8 @@ class Noticia extends Model
     {
         $this -> attributes ['data_publicacao'] = Carbon::createFromFormat("d/m/Y", $valve) -> format("Y-m-d");
     }
+
+    public function comentarios(){
+        return $this->hasMany(Comentario::class);
+    }
 }

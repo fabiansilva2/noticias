@@ -42,7 +42,7 @@ class NoticiaController extends Controller
         ]);
     }
 
-    public function update($noticia, NoticiaRequest $request)
+    public function update(Noticia $noticia, NoticiaRequest $request)
     {
         $dados = $request->all();
         if ($request->imagem){

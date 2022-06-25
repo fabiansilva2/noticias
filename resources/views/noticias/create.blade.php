@@ -35,6 +35,7 @@
                 <div class="form-group">
                     <label for="imagem">Imagem em Destaque</label>
                     <input type="file" name="imagem" id="imagem">
+
                 </div>    
 
                 <div class="form-group">
