@@ -50,7 +50,7 @@
                         <td>{{ $noticia->titulo }}</td>
                         <td>{{ $noticia->status_formatado }}</td>
                         <td>{{ $noticia->data_publicacao->format("d/m/Y") }}</td>
-                        <td><img src="{{ $noticia->imagem}}" height="40px" alt="erro"></td>
+                        <td><img src="{{ $noticia->imagem }}" height="40px" alt="erro"></td>
                     </tr>
                 @endforeach
             </tbody>
@@ -59,6 +59,31 @@
         {{ $noticias->links() }}
     </div>
 </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function confirmarExclusao(event) {
+            event.preventDefault();
+            swal({
+                title: "Você tem certeza que deseja excluir o registro?",
+                icon: "warning",
+                dangerMode: true,
+                buttons: {
+                    cancel: "Cancelar",
+                    catch: {
+                        text: "Excluir",
+                        value: true,
+                    },
+                }
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    event.target.submit();
+                } else {
+                    return false;
+                }
+            });
+        }
+    </script>
 @stop
 
 {{-- <x-master title="Formulario de Notícias">

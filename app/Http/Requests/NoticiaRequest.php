@@ -32,7 +32,7 @@ class NoticiaRequest extends FormRequest
                 Rule::in(['A', 'I'])
             ],
             'data_publicacao' => ['required','date_format:d/m/Y'],
-            'imagem' => 'nullable|imagem'
+            'imagem' => 'nullable|image'
         ];
     }
 
